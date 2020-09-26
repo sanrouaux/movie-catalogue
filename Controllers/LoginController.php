@@ -1,6 +1,10 @@
 <?php 
 
+namespace Controllers;
+
+//use Controllers\Controller;
 require_once('./Controllers/Controller.php');
+//use Models\CRUDUsers;
 require_once('./Models/CRUDUsers.php');
 
 

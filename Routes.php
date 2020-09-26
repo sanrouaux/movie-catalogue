@@ -1,9 +1,16 @@
 <?php
 
-    require_once('./resources/Route.php');
-    require_once('./Controllers/CatalogController.php');
+    use resources\Route;
+    //require_once('./resources/Route.php');
+    
+    use Controllers\CatalogController;
+    //require_once('./Controllers/CatalogController.php');
+    //use Controllers\WelcomeController;
     require_once('./Controllers/WelcomeController.php');
-    require_once('./Controllers/LoginController.php');
+    
+    use Controllers\LoginController;
+    //require_once('./Controllers/LoginController.php');
+    
     require_once('./Controllers/DeleteFilmController.php');
     require_once('./Controllers/RetrieveFilmController.php');
     require_once('./Controllers/AddFilmController.php');

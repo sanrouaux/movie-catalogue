@@ -7,7 +7,7 @@
 
     function autoload($class) {
         
-        $class = ROOT . DS . str_replace("\\", DS, $class) . 'php';
+        $class = ROOT . DS . str_replace("\\", DS, $class) . '.php';
     
         if(!file_exists($class)) {
             throw new Exception('Error al cargar la clase ' . $class);
