@@ -1,8 +1,5 @@
 <?php
 
-    use Resources\Route;
-    use Controllers\LoginController;
-    
     require_once('./resources/Route.php');
     require_once('./Controllers/CatalogController.php');
     require_once('./Controllers/WelcomeController.php');

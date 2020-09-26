@@ -1,7 +1,5 @@
 <?php 
 
-namespace Resources;
-
 /**
  * Class DatabaseAccess
  * 
