@@ -1,5 +1,10 @@
 <?php
 
+namespace Models;
+
+use Resources\DatabaAccess;
+use Models\User;
+
 require_once('./resources/DatabaseAccess.php');
 require_once('./Models/User.php');
 

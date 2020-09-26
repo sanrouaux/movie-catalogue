@@ -1,5 +1,7 @@
 <?php
 
+namespace Resources;
+
 class Route {
 
     public static function set($route, $function) {
