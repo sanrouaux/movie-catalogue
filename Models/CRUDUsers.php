@@ -1,7 +1,8 @@
 <?php
 
-require_once('./resources/DatabaseAccess.php');
-require_once('./Models/User.php');
+namespace Models;
+
+use resources\DatabaseAccess;
 
 class CRUDUsers
 {

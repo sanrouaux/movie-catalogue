@@ -1,17 +1,17 @@
 <?php
 
-    require_once('./resources/Route.php');
-    require_once('./Controllers/CatalogController.php');
-    require_once('./Controllers/WelcomeController.php');
-    require_once('./Controllers/LoginController.php');
-    require_once('./Controllers/DeleteFilmController.php');
-    require_once('./Controllers/RetrieveFilmController.php');
-    require_once('./Controllers/AddFilmController.php');
-    require_once('./Controllers/EditFilmController.php');
-    require_once('./Controllers/SigninController.php');
-    require_once('./Controllers/RecommendFilmController.php');
+    use resources\Route;
+    use Controllers\WelcomeController;
+    use Controllers\CatalogController;
+    use Controllers\LoginController;
+    use Controllers\DeleteFilmController;
+    use Controllers\RetrieveFilmController;
+    use Controllers\AddFilmController;
+    use Controllers\EditFilmController;
+    use Controllers\SigninController;
+    use Controllers\RecommendFilmController;
 
-
+    
     Route::set('', function() {
         $controller = new WelcomeController();
         $controller->execute();

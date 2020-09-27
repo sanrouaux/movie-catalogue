@@ -1,7 +1,8 @@
 <?php
 
-require_once('./Models/Film.php');
-require_once('./resources/DatabaseAccess.php');
+namespace Models;
+
+use resources\DatabaseAccess;
 
 class CRUDFilms
 {

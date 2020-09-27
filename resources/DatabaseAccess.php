@@ -1,5 +1,9 @@
 <?php 
 
+namespace resources;
+
+use PDO;
+
 /**
  * Class DatabaseAccess
  * 

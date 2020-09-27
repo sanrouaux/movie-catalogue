@@ -1,7 +1,8 @@
 <?php 
 
-require_once('./Controllers/Controller.php');
-require_once('./Models/CRUDFilms.php');
+namespace Controllers;
+
+use Models\CRUDFilms;
 
 
 class EditFilmController extends Controller
