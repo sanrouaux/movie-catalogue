@@ -1,9 +1,8 @@
 <?php 
 
+namespace Controllers;
 
-require_once('./Controllers/Controller.php');
-require_once('./resources/DatabaseAccess.php');
-require_once('./Models/CRUDUsers.php');
+use Models\CRUDUsers;
 
 
 class SigninController extends Controller

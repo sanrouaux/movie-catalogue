@@ -2,11 +2,8 @@
 
 namespace Controllers;
 
-//use Controllers\Controller;
-require_once('./Controllers/Controller.php');
-//use Models\CRUDUsers;
-require_once('./Models/CRUDUsers.php');
-
+use Models\CRUDUsers;
+use stdClass;
 
 class LoginController extends Controller
 {      

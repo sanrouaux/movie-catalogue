@@ -1,9 +1,6 @@
-<?php 
+<?php
 
-//namespace Controllers;
-
-require_once('./Controllers/Controller.php');
-
+namespace Controllers;
 
 class WelcomeController extends Controller
 {      
