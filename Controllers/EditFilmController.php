@@ -4,9 +4,16 @@ namespace Controllers;
 
 use Models\CRUDFilms;
 use stdClass;
+use resources\Logger;
+use \Exception;
 
 class EditFilmController extends Controller
 {      
+    protected $logger;
+
+    public function __construct() {
+        $this->logger = Logger::getLogger();
+    }
     
     public function execute() {
 
@@ -39,6 +46,7 @@ class EditFilmController extends Controller
 
         }
         catch (Exception $e) {
+            $this->logger->error($e->getMessage());
             echo $e->getMessage();
         }
     }

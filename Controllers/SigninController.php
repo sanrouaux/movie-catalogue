@@ -4,9 +4,16 @@ namespace Controllers;
 
 use Models\CRUDUsers;
 use stdClass;
+use resources\Logger;
+use \Exception;
 
 class SigninController extends Controller
 {      
+    protected $logger;
+
+    public function __construct() {
+        $this->logger = Logger::getLogger();
+    }
     
     public function execute() {
 
@@ -37,6 +44,7 @@ class SigninController extends Controller
             
         }
         catch(Exception $e) {
+            $this->logger->error($e->getMessage());
             echo $e->getMessage();
         }
     }
