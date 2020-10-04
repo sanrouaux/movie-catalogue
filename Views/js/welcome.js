@@ -1,9 +1,7 @@
 window.onload = function() {
-    addFuntionalityToButtons();
-};
 
-function addFuntionalityToButtons() {
-    document.addEventListener('click', function(event) {
+    document.onclick = function(event) {
+
         var signinLink = document.getElementsByClassName('signin-link')[0];
         var loginLink = document.getElementsByClassName('login-link')[0];
         var firstName = document.getElementById('firstName');
@@ -17,8 +15,11 @@ function addFuntionalityToButtons() {
             signinLink.style.fontSize = '1rem';
             firstName.style.display = 'none';
             lastName.style.display = 'none';
+            document.getElementsByClassName('create-account-validation-name')[0].hidden = true;
+            document.getElementsByClassName('create-account-validation-lastName')[0].hidden = true;
+            document.getElementsByClassName('create-account-validation-email')[0].hidden = true;
+            document.getElementsByClassName('create-account-validation-password')[0].hidden = true;
             button.onclick = Login;
-            hideNewAccountValidation();
         }
         else if(event.target.matches('.signin-link')) {
             signinLink.style.fontWeight = 'bold';
@@ -29,8 +30,9 @@ function addFuntionalityToButtons() {
             lastName.style.display = 'inline-block';
             button.onclick = Signin;
         }
-    });
-} 
+    };
+};
+
 
 function Login() {
 
@@ -71,7 +73,9 @@ function Signin() {
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     
-    if(validateNewAccount(firstName, lastName, email, password)) {
+    var validationResult = validateNewAccount(firstName, lastName, email, password);
+
+    if(validationResult) {
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "./signin");
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -96,8 +100,6 @@ function Signin() {
             }
         }
     }
-
-   
 }
 
 function validateNewAccount (firstName, lastName, email, password) {
@@ -140,11 +142,4 @@ function validateNewAccount (firstName, lastName, email, password) {
     else {
         return false;
     }
-}
-
-function hideNewAccountValidation () {
-    document.getElementsByClassName('create-account-validation-name')[0].hidden = true;
-    document.getElementsByClassName('create-account-validation-lastName')[0].hidden = true;
-    document.getElementsByClassName('create-account-validation-email')[0].hidden = true;
-    document.getElementsByClassName('create-account-validation-password')[0].hidden = true;
 }
