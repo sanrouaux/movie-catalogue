@@ -3,7 +3,7 @@
 namespace Controllers;
 
 use Models\CRUDFilms;
-
+use stdClass;
 
 class RecommendFilmController extends Controller
 {      

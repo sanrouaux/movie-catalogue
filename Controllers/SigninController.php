@@ -3,7 +3,7 @@
 namespace Controllers;
 
 use Models\CRUDUsers;
-
+use stdClass;
 
 class SigninController extends Controller
 {      

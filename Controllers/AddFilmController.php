@@ -3,6 +3,7 @@
 namespace Controllers;
 
 use Models\CRUDFilms;
+use stdClass;
 
 class AddFilmController extends Controller
 {      
