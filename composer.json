@@ -1,0 +1,14 @@
+{
+    "name": "sanrouaux/catalogodepelis",
+    "description": "A film catalog with user and admin funtionality",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Santiago Rouaux",
+            "email": "sanrouaux@gamil.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^2.1"
+    }
+}
